@@ -23,3 +23,6 @@ add_test(
     NAME test_exchange
     COMMAND $<TARGET_FILE:test_exchange>
 )
+set_tests_properties(test_bank PROPERTIES COST 0.3)
+set_tests_properties(test_exchange PROPERTIES COST 5.5)
+set_tests_properties(test_bank test_exchange PROPERTIES LABELS finance)
